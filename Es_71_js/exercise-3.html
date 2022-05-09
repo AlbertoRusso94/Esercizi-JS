@@ -1,0 +1,29 @@
+<html>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>First Name:</label>
+          <input type="text" class="form-input" id="firstName" value="Mario" />
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input type="text" class="form-input" id="lastName" value="Rossi" />
+        </div>
+        <div>
+          <label>Age:</label>
+          <input type="number" class="form-input" id="age" value="25" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  // code here
+  let fNameL = document.querySelectorAll("label");
+  let fNameI = document.querySelectorAll(".form-input");
+  console.log(fNameL[0].textContent, fNameI[0].value);
+  console.log(fNameL[1].textContent, fNameI[1].value);
+  console.log(fNameL[2].textContent, fNameI[2].value);
+</script>

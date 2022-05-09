@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <div id="container">
+      <ul class="todo-list"></ul>
+    </div>
+  </body>
+</html>
+
+<script>
+  // code here
+  let ulList = document.querySelector("ul");
+  async function arr() {
+    let response = await fetch("https://jsonplaceholder.typicode.com/todos");
+    let array = await response.json();
+    array.forEach((titoli) => {
+      let liList = document.createElement("li");
+      liList.innerHTML = titoli.title;
+      ulList.append(liList);
+    });
+  }
+
+  arr();
+</script>

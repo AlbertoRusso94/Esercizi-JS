@@ -1,0 +1,48 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's Form</h2>
+      <form id="person-form">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  // Code here
+  let createForm = document.getElementById("person-form");
+  createForm.addEventListener("submit", (evento) => {
+    evento.preventDefault();
+    let person = {
+      firstName: evento.target[0].value,
+      lastName: evento.target[1].value,
+      age: evento.target[2].value,
+    };
+    console.log(person);
+  });
+
+  function initForm() {
+    let labelFname = document.createElement("label");
+    labelFname.innerText = "First Name";
+    let inputFname = document.createElement("input");
+    inputFname.setAttribute("type", "text");
+    let labelLname = document.createElement("label");
+    labelLname.innerText = "Last Name";
+    let inputLname = document.createElement("input");
+    inputLname.setAttribute("type", "text");
+    let labelAge = document.createElement("label");
+    labelAge.innerText = "Age";
+    let inputAge = document.createElement("input");
+    inputAge.setAttribute("type", "number");
+    createForm.prepend(
+      labelFname,
+      inputFname,
+      labelLname,
+      inputLname,
+      labelAge,
+      inputAge
+    );
+  }
+  initForm();
+</script>
